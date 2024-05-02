@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_0">0dp</dimen>
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_72">72dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
+    <dimen name="dimen_120">120dp</dimen>
+    <dimen name="dimen_140">140dp</dimen>
+    <dimen name="dimen_160">160dp</dimen>
+    <dimen name="dimen_180">180dp</dimen>
+    <dimen name="dimen_190">190dp</dimen>
+    <dimen name="dimen_200">200dp</dimen>
+    <dimen name="dimen_240">240dp</dimen>
+    <dimen name="dimen_280">280dp</dimen>
+
+    <!-- Text dimen -->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+
+    <!-- Integer -->
+    <integer name="max_lines_1">1</integer>
+    <integer name="max_lines_6">6</integer>
+    <integer name="span_count_2">2</integer>
+    <integer name="number_3">3</integer>
+    <integer name="number_8">8</integer>
+</resources>

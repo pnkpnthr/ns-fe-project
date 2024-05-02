@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.ns_fe_project.viewmodel.DepartmentsViewModel" />
+
+        <variable
+            name="model"
+            type="com.example.ns_fe_project.model.Departments" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/clCollapse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/abDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_190"
+                android:background="@android:color/transparent"
+                app:elevation="@dimen/dimen_0">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_160"
+                    android:fitsSystemWindows="false"
+                    app:collapsedTitleTextAppearance="@style/AppTheme.Title.Collapsed"
+                    app:expandedTitleTextAppearance="@style/AppTheme.Title.Expanded"
+                    app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvDeptHeadName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginBottom="@dimen/dimen_20"
+                            android:ellipsize="end"
+                            android:maxLines="@integer/max_lines_1"
+                            android:text="@string/default_dept_head_name"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/text_size_20"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvDepartmentList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:overScrollMode="never"
+                            android:scrollbars="horizontal"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDeptHeadName"
+                            app:layout_constraintVertical_bias="0.0"
+                            tools:itemCount="@integer/number_3"
+                            tools:listitem="@layout/item_departments" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <TextView
+                    android:id="@+id/tvProdHeadName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:ellipsize="end"
+                    android:maxLines="@integer/max_lines_1"
+                    android:text="@string/default_prod_head_name"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/abDepartment" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_5"
+                android:overScrollMode="never"
+                app:layoutManager="GridLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintTop_toBottomOf="@+id/tvProdHeadName"
+                tools:itemCount="20"
+                tools:layout_editor_absoluteX="10dp"
+                tools:listitem="@layout/item_products"
+                tools:spanCount="2" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_transparent_50"
+            android:visibility="@{viewModel.loading ? View.VISIBLE : View.GONE}"
+            tools:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/dimen_80"
+                android:layout_height="@dimen/dimen_80"
+                android:background="@drawable/bg_circle_progress"
+                android:padding="@dimen/dimen_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_0"
+            android:gravity="center"
+            android:text="@string/error_title"
+            android:visibility="@{viewModel.error ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

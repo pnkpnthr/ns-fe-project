@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.ns_fe_project.model.Departments" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csDept"
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_100"
+        android:scaleType="fitXY"
+        android:layout_marginVertical="@dimen/dimen_10"
+        android:layout_marginHorizontal="@dimen/dimen_5"
+        android:clipToOutline="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/bg_department_frame">
+
+        <ImageView
+            android:id="@+id/ivDept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/tvDeptName"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginEnd="@dimen/dimen_8"
+            android:ellipsize="end"
+            android:maxLines="@integer/max_lines_1"
+            android:text="@{model.name}"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintEnd_toEndOf="@+id/ivDept"
+            app:layout_constraintTop_toTopOf="@+id/ivDept"
+            tools:text="@string/default_dept_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

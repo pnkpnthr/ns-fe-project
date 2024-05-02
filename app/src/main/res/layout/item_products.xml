@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.ns_fe_project.model.Products" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csProd"
+        android:layout_width="@dimen/dimen_180"
+        android:layout_height="@dimen/dimen_200"
+        android:layout_marginVertical="@dimen/dimen_10"
+        android:clipToOutline="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/bg_department_frame">
+
+        <ImageView
+            android:id="@+id/ivProd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_120"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:ellipsize="end"
+            android:maxLines="@integer/max_lines_1"
+            android:text="@{model.name}"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProd"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/tvProductDesc"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:ellipsize="end"
+            android:maxLines="@integer/max_lines_1"
+            android:text="@{model.desc}"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+            tools:text="Desc" />
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:ellipsize="end"
+            android:maxLines="@integer/max_lines_1"
+            android:text="@{model.price}"
+            android:textAlignment="textEnd"
+            android:textColor="@color/gray_2e"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductDesc"
+            tools:text="Price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

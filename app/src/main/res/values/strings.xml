@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ns-fe-project</string>
+    <string name="title_features">features</string>
+    <string name="title_dynamicfeature">features</string>
+
+    <string name="error_title">An error occurred while loading data.</string>
+
+    <string name="default_dept_head_name">Department Carousel</string>
+    <string name="default_dept_name">Department</string>
+    <string name="default_prod_head_name">Product list: %s</string>
+    <string name="product_desc">Product Description</string>
+    <string name="close_text">Close</string>
+    <string name="title_uitesting">uitesting</string>
+</resources>

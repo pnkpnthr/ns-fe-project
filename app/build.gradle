@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        configurations.configureEach {
+            resolutionStrategy { force 'androidx.core:core-ktx:1.8.0' }
+        }
+        applicationId "com.example.ns_fe_project"
+        minSdk 31
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        buildFeatures {
+            dataBinding true
+            viewBinding true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    namespace 'com.example.ns_fe_project'
+}
+
+dependencies {
+
+    implementation libs.core
+    implementation libs.appCompat
+    implementation libs.material
+    implementation libs.constraintlayout
+
+    implementation libs.retrofit
+    implementation libs.converterGson
+    implementation libs.adapterRxjava2
+    implementation libs.rxJava
+    implementation libs.rxJavaAndroid
+    implementation libs.rxKotlin
+    implementation libs.rxAndroid
+
+    implementation libs.glide
+
+    implementation libs.lifecycleLiveData
+    implementation libs.lifecycleViewModel
+    implementation libs.lifecycleReactiveStreams
+    implementation libs.lifecycleRuntime
+
+    implementation libs.daggerHilt
+    implementation libs.legacySupport
+    kapt libs.hiltCompiler
+
+    implementation libs.navigationFragment
+    implementation libs.coroutinesCore
+    implementation libs.coroutinesAndroid
+    implementation libs.okhttp
+    implementation libs.loggingInterceptor
+
+    testImplementation libs.junit
+    testImplementation libs.mockito
+    testImplementation libs.mockitoKotlin2
+    testImplementation libs.coroutinesTest
+    androidTestImplementation libs.extJunit
+    androidTestImplementation libs.espressoCore
+}
+
+kapt {
+    correctErrorTypes true
+}

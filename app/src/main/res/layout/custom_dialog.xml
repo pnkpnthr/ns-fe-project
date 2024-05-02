@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cdProductDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_transparent_50" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/dimen_280"
+            android:layout_height="@dimen/dimen_200"
+            android:background="@drawable/bg_department_frame"
+            android:clipToOutline="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvProductDescHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:text="@string/product_desc"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:ellipsize="end"
+                android:maxLines="@integer/max_lines_6"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductDescHead"
+                tools:layout_editor_absoluteX="10dp"
+                tools:text="as;ldkfja;sldkfj;alskdjf;alksdjf;alksdjf;alskdjf;alksdjf;laksdjf;alksjdf;lkajsdf;lkjas;dflkja;sdlfkja;sldkfja;sldkjf;aslkdjf;alsdkjf;alskdjf;alskdjf;laksdjf;alskdjf;alskdjf;laskdjf;alskdjf;alksdjf;laskdjf;alskdjf;alkdjf;alskdjf;alskdjf;aslkdjf;alsdkjf;alsdkjf;askldfja;lsdkfja;lskfja;sldkfja;sldkfjasl;dkfj;ailsduf;aksdjf;laskdjf;lasdjfl;asdjfl;iasdufikasdf;adnfkljzdfhg;aksdfgh;asdf" />
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:background="@drawable/close_button"
+                android:padding="@dimen/dimen_10"
+                android:text="@string/close_text"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvClosePopup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close_text"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/btnClose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnClose" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

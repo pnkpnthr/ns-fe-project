@@ -1,0 +1,66 @@
+[versions]
+androidCoreVersion = '1.7.0'
+appCompatVersion = '1.4.2'
+materialVersion = '1.6.1'
+constraintlayoutVersion = '2.1.4'
+recyclerviewVersion = '1.3.2'
+retrofitVersion = '2.9.0'
+adapterRxJavaVersion = '2.5.0'
+glideVersion = '4.12.0'
+rxJavaVersion = '2.2.13'
+rxKotlinVersion = '2.3.0'
+rxJavaAndroidVersion = '2.1.1'
+rxAndroidVersion = '2.0.1'
+hiltVersion = '2.44'
+lifeCycleVersion = '2.7.0'
+coroutinesVersion = '1.6.4'
+okHttp3Version = '4.9.0'
+navigationVersion = '2.7.7'
+legacySupportVersion = '1.0.0'
+junitVersion = '4.13.2'
+extJunitVersion = '1.1.3'
+espressoCoreVersion = '3.4.0'
+mockitoVersion = '5.3.1'
+mockitoKotlin2Version = '2.2.0'
+kotlinVersion = "1.6.0"
+coroutinesTestVersion = "1.6.4"
+agpVersion = "7.2.1"
+annotationVersion = "1.7.1"
+
+[libraries]
+core = {group = "androidx.core", name ="core-ktx", version.ref = "androidCoreVersion"}
+appCompat = {group = "androidx.appcompat", name ="appcompat", version.ref = "appCompatVersion"}
+material = {group = "com.google.android.material", name ="material", version.ref = "materialVersion"}
+constraintlayout = {group = "androidx.constraintlayout", name ="constraintlayout", version.ref = "constraintlayoutVersion"}
+retrofit = {group = "com.squareup.retrofit2", name ="retrofit", version.ref = "retrofitVersion"}
+converterGson = {group = "com.squareup.retrofit2", name ="converter-gson", version.ref = "retrofitVersion"}
+adapterRxjava2 = {group = "com.squareup.retrofit2", name ="adapter-rxjava2", version.ref = "adapterRxJavaVersion"}
+rxJava = {group = "io.reactivex.rxjava2", name ="rxjava", version.ref = "rxJavaVersion"}
+rxJavaAndroid = {group = "io.reactivex.rxjava2", name ="rxandroid", version.ref = "rxJavaAndroidVersion"}
+rxKotlin = {group = "io.reactivex.rxjava2", name ="rxkotlin", version.ref = "rxKotlinVersion"}
+rxAndroid = {group = "io.reactivex.rxjava2", name ="rxandroid", version.ref = "rxAndroidVersion"}
+glide = {group = "com.github.bumptech.glide", name ="glide", version.ref = "glideVersion"}
+lifecycleLiveData = {group = "androidx.lifecycle", name ="lifecycle-livedata-ktx", version.ref = "lifeCycleVersion"}
+lifecycleViewModel = {group = "androidx.lifecycle", name ="lifecycle-viewmodel-ktx", version.ref = "lifeCycleVersion"}
+lifecycleReactiveStreams = {group = "androidx.lifecycle", name ="lifecycle-reactivestreams-ktx", version.ref = "lifeCycleVersion"}
+lifecycleRuntime = {group = "androidx.lifecycle", name ="lifecycle-runtime-ktx", version.ref = "lifeCycleVersion"}
+daggerHilt = {group = "com.google.dagger", name ="hilt-android", version.ref = "hiltVersion"}
+hiltCompiler = {group = "com.google.dagger", name ="hilt-compiler", version.ref = "hiltVersion"}
+legacySupport = {group = "androidx.legacy", name ="legacy-support-v4", version.ref = "legacySupportVersion"}
+navigationFragment = {group = "androidx.navigation", name ="navigation-fragment-ktx", version.ref = "navigationVersion"}
+coroutinesCore = {group = "org.jetbrains.kotlinx", name ="kotlinx-coroutines-core", version.ref = "coroutinesVersion"}
+coroutinesAndroid = {group = "org.jetbrains.kotlinx", name ="kotlinx-coroutines-android", version.ref = "coroutinesVersion"}
+okhttp = {group = "com.squareup.okhttp3", name ="okhttp", version.ref = "okHttp3Version"}
+loggingInterceptor = {group = "com.squareup.okhttp3", name ="logging-interceptor", version.ref = "okHttp3Version"}
+junit = {group = "junit", name ="junit", version.ref = "junitVersion"}
+extJunit = {group = "androidx.test.ext", name ="junit", version.ref = "extJunitVersion"}
+espressoCore = {group = "androidx.test.espresso", name ="espresso-core", version.ref = "espressoCoreVersion"}
+mockito = {group = "org.mockito.kotlin", name ="mockito-kotlin", version.ref = "mockitoVersion"}
+mockitoKotlin2 = {group = "com.nhaarman.mockitokotlin2", name ="mockito-kotlin", version.ref = "mockitoKotlin2Version"}
+coroutinesTest = {group = "org.jetbrains.kotlinx", name ="kotlinx-coroutines-test", version.ref = "coroutinesTestVersion"}
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotationVersion" }
+
+[plugins]
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agpVersion" }
+
